@@ -2,244 +2,280 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio Akbar Rahmadani Rahman</title>
-    <meta name="description" content="Portfolio Akbar Rahmadani Rahman - Software Engineering student passionate about web development." />
-    <!-- Open Graph -->
-    <meta property="og:title" content="Portfolio Akbar Rahmadani Rahman" />
-    <meta property="og:description" content="Software Engineering student passionate about web development." />
-    <meta property="og:image" content="aKBARGANTENG.jpg" />
-    <meta property="og:url" content="https://yourwebsite.com" />
-    <meta property="og:type" content="website" />
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Portfolio Akbar Rahmadani Rahman" />
-    <meta name="twitter:description" content="Software Engineering student passionate about web development." />
-    <meta name="twitter:image" content="aKBARGANTENG.jpg" />
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            background: #7b1212;
-            /* merah tua */
-            color: #f9fafb;
-            /* putih terang */
-            font-family: 'Inter', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Akbar Rahmadani Rahman</title>
+  <meta name="description" content="Portfolio Akbar Rahmadani Rahman - Software Engineering student passionate about web development." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfolio Akbar Rahmadani Rahman" />
+  <meta property="og:description" content="Software Engineering student passionate about web development." />
+  <meta property="og:image" content="aKBARGANTENG.jpg" />
+  <meta property="og:url" content="https://yourwebsite.com" />
+  <meta property="og:type" content="website" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio Akbar Rahmadani Rahman" />
+  <meta name="twitter:description" content="Software Engineering student passionate about web development." />
+  <meta name="twitter:image" content="aKBARGANTENG.jpg" />
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: #7b1212;
+      /* merah tua */
+      color: #f9fafb;
+      /* putih terang */
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+    }
 
-        a {
-            transition: color 0.3s ease;
-        }
+    a {
+      transition: color 0.3s ease;
+    }
 
-        a:hover,
-        a:focus {
-            color: #f87171;
-            /* merah muda */
-            outline: none;
-        }
+    a:hover,
+    a:focus {
+      color: #f87171;
+      /* merah muda */
+      outline: none;
+    }
 
-        /* Fade-in animation */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1.5s ease forwards;
-            animation-play-state: paused;
-        }
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+      animation-play-state: paused;
+    }
 
-        .fade-in.visible {
-            animation-play-state: running;
-        }
+    .fade-in.visible {
+      animation-play-state: running;
+    }
 
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
 
-        /* Hamburger menu styles */
-        #menu-toggle:checked + #menu {
-            display: block;
-        }
+    /* Hamburger toggle checkbox hidden */
+    #menu-toggle {
+      display: none;
+    }
 
-        @media (min-width: 768px) {
-            #menu {
-                display: flex !important;
-            }
+    /* Menu default hidden on mobile */
+    #menu {
+      display: none;
+    }
 
-            #menu-toggle {
-                display: none;
-            }
-        }
-    </style>
+    /* Show menu when toggle checked */
+    #menu-toggle:checked ~ #menu {
+      display: block;
+    }
+
+    /* Desktop styles */
+    @media (min-width: 768px) {
+      #menu {
+        display: flex !important;
+        position: static !important;
+        width: auto !important;
+        background: none !important;
+        padding: 0 !important;
+        text-align: left !important;
+      }
+
+      #menu-toggle {
+        display: none;
+      }
+
+      label[for="menu-toggle"] {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body class="min-h-screen flex flex-col">
-    <header class="bg-[#5a0f0f] sticky top-0 z-30 shadow-md">
-        <nav class="container mx-auto flex justify-between items-center py-2 px-6">
-            <div>
-                <h1 class="text-xl font-bold tracking-wide">Akbar Rahmadani</h1>
-                <p class="text-xs text-gray-300">Software Engineering.</p>
-            </div>
-            <!-- Hamburger button for mobile -->
-            <input type="checkbox" id="menu-toggle" class="hidden" aria-label="Toggle menu" />
-            <label for="menu-toggle" class="cursor-pointer md:hidden block">
-                <svg class="fill-current text-gray-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24">
-                    <path d="M4 5h16M4 12h16M4 19h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                </svg>
-            </label>
-            <ul id="menu" class="hidden md:flex space-x-6 text-sm font-medium" role="menu" aria-label="Main menu">
-                <li><a href="#about" class="hover:text-red-300 focus:outline-none focus:ring-2 focus:ring-red-400" role="menuitem">About</a></li>
-                <li><a href="#skills" class="hover:text-red-300 focus:outline-none focus:ring-2 focus:ring-red-400" role="menuitem">Skills</a></li>
-                <li><a href="#contact" class="hover:text-red-300 focus:outline-none focus:ring-2 focus:ring-red-400" role="menuitem">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="bg-[#5a0f0f] sticky top-0 z-40 shadow-md">
+    <nav class="container mx-auto flex justify-between items-center py-2 px-6 relative">
+      <div>
+        <h1 class="text-xl font-bold tracking-wide text-white">Akbar Rahmadani</h1>
+        <p class="text-xs text-gray-300">Software Engineering.</p>
+      </div>
 
-    <main class="flex-grow">
-        <section id="hero" class="container mx-auto px-6 py-20 fade-in" tabindex="-1">
-            <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
-                <div class="flex-1 text-left">
-                    <h2 class="text-4xl font-semibold mb-3 text-white">Akbar Rahmadani Rahman</h2>
-                    <p class="text-red-300 text-lg mb-4">Siswa SMK Telkom LPG</p>
-                    <p class="text-gray-200 max-w-md">
-                        Passionate about creating innovative web solutions, with expertise in modern technologies and a love for clean, responsive design.
-                    </p>
-                    <a href="#contact"
-                        class="inline-block mt-6 bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-3 rounded-full shadow-md transition focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2">
-                        Hubungi Saya
-                    </a>
-                </div>
+      <!-- Hamburger toggle checkbox -->
+      <input type="checkbox" id="menu-toggle" aria-label="Toggle menu" />
 
-                <div class="flex-shrink-0">
-                    <img src="aKBARGANTENG.jpg" alt="Foto Akbar Rahmadani" loading="lazy"
-                        class="rounded-full w-48 h-48 object-cover border-4 border-red-400 shadow-lg" />
-                </div>
-            </div>
-        </section>
+      <!-- Hamburger icon label -->
+      <label for="menu-toggle"
+        class="cursor-pointer md:hidden block p-3 z-50 fixed top-4 right-4 bg-[#5a0f0f] rounded-md shadow-lg"
+        aria-label="Toggle menu">
+        <svg class="fill-current text-gray-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+          <path d="M4 5h16M4 12h16M4 19h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </label>
 
-        <section id="about" class="container mx-auto px-6 py-16 fade-in bg-white rounded-3xl" tabindex="-1">
-            <h3 class="text-3xl font-semibold text-center mb-10 text-gray-900">About Me</h3>
-            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-                <div class="text-gray-800 space-y-4">
-                    <p>
-                        Halo! Nama saya Akbar Rahmadani, seorang siswa yang bersemangat dari SMK Telkom Lampung. Saat ini, saya sedang mendalami dunia pemrograman. Meskipun masih dalam tahap awal, saya sangat antusias untuk terus belajar dan menguasai teknologi, terutama dalam
-                        pengembangan web.
-                    </p>
-                    <p>
-                        Sejauh ini, saya sudah mempelajari dasar-dasar HTML, CSS, dan JavaScript. Saya suka bagaimana kombinasi ketiganya bisa membuat sebuah ide menjadi tampilan visual yang interaktif di layar. Saya memiliki rasa ingin tahu yang besar dan selalu berusaha memecahkan
-                        masalah dengan cara yang kreatif.
-                    </p>
-                </div>
-                <img src="codingjpg.jpg" alt="Workspace coding dengan laptop dan monitor" loading="lazy"
-                    class="rounded-3xl shadow-lg object-cover w-full" />
-            </div>
-        </section>
+      <!-- Navigation menu -->
+      <ul id="menu"
+        class="hidden md:flex space-x-6 text-sm font-medium text-white bg-[#5a0f0f] md:bg-transparent fixed top-16 right-0 w-full md:static md:w-auto md:p-0 p-4 md:rounded-none rounded-lg shadow-lg md:shadow-none"
+        role="menu" aria-label="Main menu">
+        <li><a href="#about" class="hover:text-red-300 focus:outline-none focus:ring-2 focus:ring-red-400 rounded"
+            role="menuitem">About</a></li>
+        <li><a href="#skills" class="hover:text-red-300 focus:outline-none focus:ring-2 focus:ring-red-400 rounded"
+            role="menuitem">Skills</a></li>
+        <li><a href="#contact" class="hover:text-red-300 focus:outline-none focus:ring-2 focus:ring-red-400 rounded"
+            role="menuitem">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <section id="skills" class="bg-[#5a0f0f] py-16 fade-in" tabindex="-1">
-            <div class="container mx-auto px-6 max-w-5xl">
-                <h3 class="text-3xl font-semibold text-center text-red-300 mb-10">My Skills</h3>
-                <div class="grid md:grid-cols-3 gap-8 text-center text-gray-100">
-                    <div class="bg-[#7b1212] rounded-3xl p-6 shadow-md">
-                        <h4 class="text-xl font-semibold mb-3">Front-End</h4>
-                        <p class="mb-4">HTML, CSS, JavaScript</p>
-                        <div class="w-full bg-red-900 rounded-full h-4" role="progressbar" aria-valuenow="50" aria-valuemin="0"
-                            aria-valuemax="100" aria-label="Front-End skill level">
-                            <div class="bg-red-400 h-4 rounded-full" style="width: 50%;"></div>
-                        </div>
-                    </div>
-                    <div class="bg-[#7b1212] rounded-3xl p-6 shadow-md">
-                        <h4 class="text-xl font-semibold mb-3">Back-End</h4>
-                        <p class="mb-4">Python</p>
-                        <div class="w-full bg-red-900 rounded-full h-4" role="progressbar" aria-valuenow="20" aria-valuemin="0"
-                            aria-valuemax="100" aria-label="Back-End skill level">
-                            <div class="bg-red-400 h-4 rounded-full" style="width: 20%;"></div>
-                        </div>
-                    </div>
-                    <div class="bg-[#7b1212] rounded-3xl p-6 shadow-md">
-                        <h4 class="text-xl font-semibold mb-3">Lainnya</h4>
-                        <p class="mb-4">UI/UX Designer</p>
-                        <div class="w-full bg-red-900 rounded-full h-4" role="progressbar" aria-valuenow="40" aria-valuemin="0"
-                            aria-valuemax="100" aria-label="UI/UX Designer skill level">
-                            <div class="bg-red-400 h-4 rounded-full" style="width: 40%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="bg-[#5a0f0f] py-16 fade-in" tabindex="-1">
-            <div class="container mx-auto px-6 max-w-md text-center text-gray-100">
-                <h3 class="text-3xl font-semibold mb-6">Hubungi saya</h3>
-                <p class="mb-8">Bila ada yang kurang atau ada masukan bisa tulis di bawah ini</p>
-                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Message sent!');" novalidate>
-                    <input type="text" name="name" placeholder="Your Name" required
-                        class="w-full p-3 rounded-3xl bg-[#7b1212] border border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400"
-                        aria-label="Your Name" />
-                    <input type="email" name="email" placeholder="Your Email" required
-                        class="w-full p-3 rounded-3xl bg-[#7b1212] border border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400"
-                        aria-label="Your Email" />
-                    <textarea name="message" placeholder="Your Message" rows="4" required
-                        class="w-full p-3 rounded-3xl bg-[#7b1212] border border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400"
-                        aria-label="Your Message"></textarea>
-                    <button type="submit"
-                        class="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-3 rounded-3xl shadow transition focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2">
-                        Send Message
-                    </button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-[#5a0f0f] py-6 text-center text-gray-400 text-sm rounded-t-3xl">
-        <p>&copy; 2025 Akbar Rahmadani Rahman. All rights reserved.</p>
-        <div class="flex justify-center space-x-6 mt-3">
-            <a href="https://www.instagram.com/akbarrhmdnirhmn/" target="_blank" aria-label="Instagram"
-                class="hover:text-red-400 focus:outline-none focus:ring-2 focus:ring-red-400">Instagram</a>
-            <a href="https://github.com/Lanxytt" target="_blank" aria-label="GitHub"
-                class="hover:text-red-400 focus:outline-none focus:ring-2 focus:ring-red-400">GitHub</a>
+  <main class="flex-grow">
+    <section id="hero" class="container mx-auto px-6 py-20 fade-in" tabindex="-1">
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
+        <div class="flex-1 text-left">
+          <h2 class="text-4xl font-semibold mb-3 text-white">Akbar Rahmadani Rahman</h2>
+          <p class="text-red-300 text-lg mb-4">Siswa SMK Telkom LPG</p>
+          <p class="text-gray-200 max-w-md">
+            Passionate about creating innovative web solutions, with expertise in modern technologies and a love for clean,
+            responsive design.
+          </p>
+          <a href="#contact"
+            class="inline-block mt-6 bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-3 rounded-full shadow-md transition focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2">
+            Hubungi Saya
+          </a>
         </div>
-    </footer>
 
-    <script>
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', e => {
-                e.preventDefault();
-                const target = document.querySelector(anchor.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                    // Set focus for accessibility
-                    target.setAttribute('tabindex', '-1');
-                    target.focus();
-                }
-            });
+        <div class="flex-shrink-0">
+          <img src="aKBARGANTENG.jpg" alt="Foto Akbar Rahmadani" loading="lazy"
+            class="rounded-full w-48 h-48 object-cover border-4 border-red-400 shadow-lg" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container mx-auto px-6 py-16 fade-in bg-white rounded-3xl" tabindex="-1">
+      <h3 class="text-3xl font-semibold text-center mb-10 text-gray-900">About Me</h3>
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div class="text-gray-800 space-y-4">
+          <p>
+            Halo! Nama saya Akbar Rahmadani, seorang siswa yang bersemangat dari SMK Telkom Lampung. Saat ini, saya sedang
+            mendalami dunia pemrograman. Meskipun masih dalam tahap awal, saya sangat antusias untuk terus belajar dan
+            menguasai teknologi, terutama dalam pengembangan web.
+          </p>
+          <p>
+            Sejauh ini, saya sudah mempelajari dasar-dasar HTML, CSS, dan JavaScript. Saya suka bagaimana kombinasi ketiganya
+            bisa membuat sebuah ide menjadi tampilan visual yang interaktif di layar. Saya memiliki rasa ingin tahu yang besar
+            dan selalu berusaha memecahkan masalah dengan cara yang kreatif.
+          </p>
+        </div>
+        <img src="codingjpg.jpg" alt="Workspace coding dengan laptop dan monitor" loading="lazy"
+          class="rounded-3xl shadow-lg object-cover w-full" />
+      </div>
+    </section>
+
+    <section id="skills" class="bg-[#5a0f0f] py-16 fade-in" tabindex="-1">
+      <div class="container mx-auto px-6 max-w-5xl">
+        <h3 class="text-3xl font-semibold text-center text-red-300 mb-10">My Skills</h3>
+        <div class="grid md:grid-cols-3 gap-8 text-center text-gray-100">
+          <div class="bg-[#7b1212] rounded-3xl p-6 shadow-md">
+            <h4 class="text-xl font-semibold mb-3">Front-End</h4>
+            <p class="mb-4">HTML, CSS, JavaScript</p>
+            <div class="w-full bg-red-900 rounded-full h-4" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+              aria-valuemax="100" aria-label="Front-End skill level">
+              <div class="bg-red-400 h-4 rounded-full" style="width: 50%;"></div>
+            </div>
+          </div>
+          <div class="bg-[#7b1212] rounded-3xl p-6 shadow-md">
+            <h4 class="text-xl font-semibold mb-3">Back-End</h4>
+            <p class="mb-4">Python</p>
+            <div class="w-full bg-red-900 rounded-full h-4" role="progressbar" aria-valuenow="20" aria-valuemin="0"
+              aria-valuemax="100" aria-label="Back-End skill level">
+              <div class="bg-red-400 h-4 rounded-full" style="width: 20%;"></div>
+            </div>
+          </div>
+          <div class="bg-[#7b1212] rounded-3xl p-6 shadow-md">
+            <h4 class="text-xl font-semibold mb-3">Lainnya</h4>
+            <p class="mb-4">UI/UX Designer</p>
+            <div class="w-full bg-red-900 rounded-full h-4" role="progressbar" aria-valuenow="40" aria-valuemin="0"
+              aria-valuemax="100" aria-label="UI/UX Designer skill level">
+              <div class="bg-red-400 h-4 rounded-full" style="width: 40%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-[#5a0f0f] py-16 fade-in" tabindex="-1">
+      <div class="container mx-auto px-6 max-w-md text-center text-gray-100">
+        <h3 class="text-3xl font-semibold mb-6">Hubungi saya</h3>
+        <p class="mb-8">Bila ada yang kurang atau ada masukan bisa tulis di bawah ini</p>
+        <form class="space-y-4" onsubmit="event.preventDefault(); alert('Message sent!');" novalidate>
+          <input type="text" name="name" placeholder="Your Name" required
+            class="w-full p-3 rounded-3xl bg-[#7b1212] border border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400"
+            aria-label="Your Name" />
+          <input type="email" name="email" placeholder="Your Email" required
+            class="w-full p-3 rounded-3xl bg-[#7b1212] border border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400"
+            aria-label="Your Email" />
+          <textarea name="message" placeholder="Your Message" rows="4" required
+            class="w-full p-3 rounded-3xl bg-[#7b1212] border border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400"
+            aria-label="Your Message"></textarea>
+          <button type="submit"
+            class="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-3 rounded-3xl shadow transition focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#5a0f0f] py-6 text-center text-gray-400 text-sm rounded-t-3xl">
+    <p>&copy; 2025 Akbar Rahmadani Rahman. All rights reserved.</p>
+    <div class="flex justify-center space-x-6 mt-3">
+      <a href="https://www.instagram.com/akbarrhmdnirhmn/" target="_blank" aria-label="Instagram"
+        class="hover:text-red-400 focus:outline-none focus:ring-2 focus:ring-red-400">Instagram</a>
+      <a href="https://github.com/Lanxytt" target="_blank" aria-label="GitHub"
+        class="hover:text-red-400 focus:outline-none focus:ring-2 focus:ring-red-400">GitHub</a>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth'
+          });
+          // Set focus for accessibility
+          target.setAttribute('tabindex', '-1');
+          target.focus();
+        }
+      });
+    });
+
+    // Fade-in animation on scroll using IntersectionObserver
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
         });
+      }, {
+        threshold: 0.1
+      }
+    );
 
-        // Fade-in animation on scroll using IntersectionObserver
-        const observer = new IntersectionObserver(
-            entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.1
-            }
-        );
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 </body>
 
 </html>
