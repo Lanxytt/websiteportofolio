@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio Akbar Rahmadani Rahman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: #7b1212;
+            /* merah tua */
+            color: #f9fafb;
+            /* putih terang */
+            font-family: 'Inter', sans-serif;
+        }
+        
+        a {
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: #f87171;
+            /* merah muda */
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header class="bg-[#5a0f0f] sticky top-0 z-20 shadow-md">
+        <nav class="container mx-auto flex justify-between items-center py-2 px-6">
+            <div>
+                <h1 class="text-xl font-bold tracking-wide">Akbar Rahmadani</h1>
+                <p class="text-xs text-gray-300">Software Engineering.</p>
+            </div>
+            <ul class="flex space-x-6 text-sm font-medium">
+                <li><a href="#about" class="hover:text-red-300">About</a></li>
+                <li><a href="#skills" class="hover:text-red-300">Skills</a></li>
+                <li><a href="#contact" class="hover:text-red-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="container mx-auto px-6 py-20 fade-in">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
+            <div class="flex-1 text-left">
+                <h2 class="text-4xl font-semibold mb-3">Akbar Rahmadani Rahman</h2>
+                <p class="text-red-300 text-lg mb-4">Siswa SMK Telkom LPG</p>
+                <p class="text-gray-200 max-w-md">
+                    Passionate about creating innovative web solutions, with expertise in modern technologies and a love for clean, responsive design.
+                </p>
+                <a href="#contact" class="inline-block mt-6 bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-3 rounded-full shadow-md transition">
+                    Hubungi Saya
+                </a>
+            </div>
+
+            <div class="flex-shrink-0">
+                <img src="aKBARGANTENG.jpg" alt="Foto Akbar Rahmadani" class="rounded-full w-48 h-48 object-cover border-4 border-red-400 shadow-lg" />
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container mx-auto px-6 py-16 fade-in bg-white rounded-3xl">
+        <h3 class="text-3xl font-semibold text-center mb-10 text-gray-900">About Me</h3>
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+            <div class="text-gray-800 space-y-4">
+                <p>
+                    Halo! Nama saya Akbar Rahmadani, seorang siswa yang bersemangat dari SMK Telkom Lampung. Saat ini, saya sedang mendalami dunia pemrograman. Meskipun masih dalam tahap awal, saya sangat antusias untuk terus belajar dan menguasai teknologi, terutama dalam
+                    pengembangan web.
+                </p>
+                <p>
+                    Sejauh ini, saya sudah mempelajari dasar-dasar HTML, CSS, dan JavaScript. Saya suka bagaimana kombinasi ketiganya bisa membuat sebuah ide menjadi tampilan visual yang interaktif di layar. Saya memiliki rasa ingin tahu yang besar dan selalu berusaha memecahkan
+                    masalah dengan cara yang kreatif.
+                </p>
+            </div>
+            <img src="codingjpg.jpg" alt="Workspace" class="rounded-3xl shadow-lg object-cover w-full" />
+        </div>
+    </section>
+
+    <section id="skills" class="bg-[#5a0f0f] py-16 fade-in">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h3 class="text-3xl font-semibold text-center text-red-300 mb-10">My Skills</h3>
+            <div class="grid md:grid-cols-3 gap-8 text-center text-gray-100">
+                <div class="bg-[#7b1212] rounded-3xl p-6 shadow-md">
+                    <h4 class="text-xl font-semibold mb-3">Front-End</h4>
+                    <p class="mb-4">HTML, CSS, JavaScript</p>
+                    <div class="w-full bg-red-900 rounded-full h-4">
+                        <div class="bg-red-400 h-4 rounded-full" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="bg-[#7b1212] rounded-3xl p-6 shadow-md">
+                    <h4 class="text-xl font-semibold mb-3">Back-End</h4>
+                    <p class="mb-4">Python</p>
+                    <div class="w-full bg-red-900 rounded-full h-4">
+                        <div class="bg-red-400 h-4 rounded-full" style="width: 20%;"></div>
+                    </div>
+                </div>
+                <div class="bg-[#7b1212] rounded-3xl p-6 shadow-md">
+                    <h4 class="text-xl font-semibold mb-3">Other</h4>
+                    <p class="mb-4">Git, Agile, UI/UX Design, Responsive Web</p>
+                    <div class="w-full bg-red-900 rounded-full h-4">
+                        <div class="bg-red-400 h-4 rounded-full" style="width: 88%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-[#5a0f0f] py-16 fade-in">
+        <div class="container mx-auto px-6 max-w-md text-center text-gray-100">
+            <h3 class="text-3xl font-semibold mb-6">Let's Connect</h3>
+            <p class="mb-8">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Message sent!');">
+                <input type="text" placeholder="Your Name" required class="w-full p-3 rounded-3xl bg-[#7b1212] border border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
+                <input type="email" placeholder="Your Email" required class="w-full p-3 rounded-3xl bg-[#7b1212] border border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
+                <textarea placeholder="Your Message" rows="4" required class="w-full p-3 rounded-3xl bg-[#7b1212] border border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400"></textarea>
+                <button type="submit" class="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-3 rounded-3xl shadow transition">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-[#5a0f0f] py-6 text-center text-gray-400 text-sm rounded-t-3xl">
+        <p>&copy; 2023 Akbar Rahmadani Rahman. All rights reserved.</p>
+        <div class="flex justify-center space-x-6 mt-3">
+            <a href="#" aria-label="LinkedIn" class="hover:text-red-400">LinkedIn</a>
+            <a href="#" aria-label="GitHub" class="hover:text-red-400">GitHub</a>
+            <a href="#" aria-label="Twitter" class="hover:text-red-400">Twitter</a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(anchor.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fade-in animation on scroll
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            }
+        );
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = 0;
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>
